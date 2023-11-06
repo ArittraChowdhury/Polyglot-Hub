@@ -1,0 +1,96 @@
+﻿@media only screen and (max-width: 992px) {
+    #navbarSupportedContent {
+        background-color: whitesmoke;
+    }
+}
+
+.footerlinks {
+    color: #394867;
+    padding-right: 10px;
+    text-decoration: none !important;
+}
+    .footerlinks:hover {
+        color: #884A39;
+    }
+
+
+#form1 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.login-text-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#footer1 {
+    background: #DFAE65;
+}
+
+#footer2 {
+    background: #000000;
+}
+
+.custom-nav {
+    background: #F9E0BB;
+    height:56px;
+}
+
+.custom-links {
+    color: #394867 !important;
+    text-decoration: none !important;
+}
+    .custom-links:hover {
+        color: #884A39;
+    }
+
+
+.dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    background-color: whitesmoke;
+}
+
+.navbar {
+    padding: 0;
+}
+
+    .navbar .navbar-nav .nav-link {
+        padding: 1em;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        position: relative;
+    }
+
+        .navbar .navbar-nav .nav-item::after {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            right: 0;
+            content: '';
+            background-color: #884A39;
+            width: 0%;
+            height: 3px;
+        }
+
+        .navbar .navbar-nav .nav-item:hover::after {
+            width:100%;
+        }
+
+.h1-login-card-text {
+    font-family: Lexend Deca;
+    color: #884A39;
+}
+
+.custom-hr {
+    border: none; 
+    height: 1px; 
+    background-color: black; 
+}
+
+

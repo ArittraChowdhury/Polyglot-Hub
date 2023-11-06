@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="PolyglotHub.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Polyglot Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" 
+        crossorigin="anonymous">
+
+    <link href="css/customstylesheet.css" rel="stylesheet" /> <!--Custom CSS-->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
+        crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
+ 
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>   
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light custom-nav">
+                <a class="navbar-brand" href="Default.aspx">
+                    <img src="img/HeaderLogo.png" width="136" height="45"/>
+                </a>   
+                <a class="navbar-toggler" role="button" data-bs-toggle="collapse" 
+                    href="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toogle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </a>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link active custom-links" href="Default.aspx">Home</a>
+                        </li> 
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link custom-links" href="LessonPage.aspx">Lessons</a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <asp:LinkButton ID="LinkButton12" class="nav-link custom-links dropdown-toggle" 
+                                role="button" data-bs-hover="dropdown" runat="server" aria-expanded="false">
+                                Grammar
+                            </asp:LinkButton>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="GrammarPage?level=1">Beginner</a></li>
+                                <li><a class="dropdown-item" href="GrammarPage?level=2">Intermediate</a></li>
+                                <li><a class="dropdown-item" href="GrammarPage?level=3">Advance</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton ID="LinkButton6" class="nav-link custom-links" OnClick="LinkButton6_Click" 
+                                runat="server">
+                                Test Yourself
+                            </asp:LinkButton>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link custom-links" ID="LinkButton4"  runat="server" OnClick="LinkButton4_Click">Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link custom-links" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click">Sign Up</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link custom-links" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Logout</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link custom-links" ID="LinkButton2" runat="server">Hello User</asp:LinkButton>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Content -->
+
+        <div style="flex:1">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <a class="footerlinks" href="AboutUsPage.aspx">About us</a>
+                            <a class="footerlinks" href="VocabularyPage.aspx">Vocabulary</a>
+                            <asp:LinkButton class="footerlinks" ID="forumBtn" runat="server" OnClick="forumBtn_Click">Forum</asp:LinkButton>
+                            &nbsp;
+                            <a class="footerlinks" href="ContactUsPage">Contact us</a>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click">Content Management</asp:LinkButton>
+                            &nbsp;
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton11" runat="server" OnClick="LinkButton11_Click">Test Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton7" runat="server" OnClick="LinkButton7_Click">Questions Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton8" runat="server" OnClick="LinkButton8_Click">Vocabulary Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">Forum Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="LinkButton10" runat="server" OnClick="LinkButton10_Click">Member Management</asp:LinkButton>
+                            &nbsp;
+                            <asp:LinkButton class="footerlinks" ID="ReportBtn" runat="server" OnClick="ReportBtn_Click">System Report</asp:LinkButton>
+                            &nbsp;
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="footer2" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p style="color:whitesmoke">
+                            &copy 2023 Polyglot Hub. All right Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </form>
+</body>
+</html>
