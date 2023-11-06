@@ -1,5 +1,5 @@
 # Polyglot-Hub
-A dynamic language learning web application merged with a database and authentication using HTML, CSS, JavaScript, ASP.Net, C# and SQL
+A dynamic language learning web application merged with a database and authentication using HTML, CSS, JavaScript, ASP.Net, PHP, C# and SQL
 
 <h2>Step 1</h2>
 <li>Clone or download the repository files on your local machine</li>
